@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" -->
+<!--    "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd"> -->
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  <configuration>
+    <stop-on-errors>true</stop-on-errors>
+<!--     <date-format>dd/MM/yyyy HH:mm:ss</date-format>default dateformat will apply to all class maps unless the class mapping explicitly overrides it -->
+    <wildcard>true</wildcard><!-- default wildcard policy that will apply to all class maps unless the class mapping explicitly overrides it -->    
+<!--     <map-null>false</map-null> -->
+    
+  
+<!--     <custom-converters> -->
+<!--         <converter type="br.com.hcf.utils.outros.LocalDateToDateConverter"> -->
+<!--             <class-a>java.time.LocalDate</class-a> -->
+<!--             <class-b>java.util.Date</class-b> -->
+<!--         </converter> -->
+<!--         <converter type="br.com.hcf.utils.outros.LocalDateTimeToDateConverter"> -->
+<!--             <class-a>java.time.LocalDateTime</class-a> -->
+<!--             <class-b>java.util.Date</class-b> -->
+<!--         </converter>         -->
+<!--         <converter type="br.com.hcf.utils.outros.LocalDateTimeToLocalDateTimeConverter"> -->
+<!--             <class-a>java.time.LocalDateTime</class-a> -->
+<!--             <class-b>java.time.LocalDateTime</class-b> -->
+<!--         </converter>    -->
+<!--         <converter type="br.com.hcf.utils.outros.LocalDateToLocalDateConverter"> -->
+<!--             <class-a>java.time.LocalDate</class-a> -->
+<!--             <class-b>java.time.LocalDate</class-b> -->
+<!--         </converter>                  -->
+<!--         <converter type="br.com.hcf.utils.outros.ZonedDateTimeToZonedDateTimeConverter"> -->
+<!--             <class-a>java.time.ZonedDateTime</class-a> -->
+<!--             <class-b>java.time.ZonedDateTime</class-b> -->
+<!--         </converter> -->
+<!--         <converter type="br.com.hcf.utils.outros.OffsetDateTimeToOffsetDateTimeConverter"> -->
+<!--             <class-a>java.time.OffsetDateTime</class-a> -->
+<!--             <class-b>java.time.OffsetDateTime</class-b> -->
+<!--         </converter>                           -->
+<!--     </custom-converters>   -->
+    
+  </configuration>
+  
+ 
+  
+<!--   <mapping type="one-way"> -->
+<!--       <class-a>java.util.UUID</class-a> -->
+<!--       <class-b bean-factory="br.com.hcf.utils.outros.DozenUuidBeanFactory">java.util.UUID</class-b> -->
+<!--   </mapping>    -->
+
+    
+</mappings>

@@ -1,0 +1,56 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="true"
+	monitoring="autodetect"
+	dynamicConfig="true">
+
+<!-- 	<cacheManagerEventListenerFactory class="br.coop.unimed.sso.utils.EhCacheManagerListener" properties=""/> -->
+	
+
+	<diskStore path="java.io.tmpdir" />
+
+	<cache name="dog_cache"
+		maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="0"
+		eternal="false"
+		diskSpoolBufferSizeMB="30"
+		timeToIdleSeconds="${juliano.cache.ttl.in.seconds}" timeToLiveSeconds="${juliano.cache.ttl.in.seconds}"
+		memoryStoreEvictionPolicy="LFU"
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+<!-- 		<cacheEventListenerFactory class="br.coop.unimed.sso.utils.EhCacheEventListener" properties="" listenFor="all"/> -->
+	</cache>
+		
+
+</ehcache>
+
+<!-- <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!--     xmlns="http://www.ehcache.org/v3" -->
+<!--     xmlns:jsr107="http://www.ehcache.org/v3/jsr107" -->
+<!--     xsi:schemaLocation=" -->
+<!--             http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd -->
+<!--             http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd"> -->
+ 
+<!--     <cache alias="ssoClientCache"> -->
+<!--         <key-type>java.lang.String</key-type> -->
+<!--         <value-type>br.com.lala.sso.model.Sessao</value-type> -->
+<!--         <expiry> -->
+<!--             <ttl unit="seconds">3600</ttl> -->
+<!--         </expiry> -->
+ 
+<!--         <listeners> -->
+<!--             <listener> -->
+<!--                 <class>com.baeldung.cachetest.config.CacheEventLogger</class> -->
+<!--                 <event-firing-mode>ASYNCHRONOUS</event-firing-mode> -->
+<!--                 <event-ordering-mode>UNORDERED</event-ordering-mode> -->
+<!--                 <events-to-fire-on>CREATED</events-to-fire-on> -->
+<!--                 <events-to-fire-on>EXPIRED</events-to-fire-on> -->
+<!--             </listener> -->
+<!--         </listeners> -->
+ 
+<!--         <resources> -->
+<!--             <heap unit="entries">1000</heap> -->
+<!--             <offheap unit="MB">1000</offheap> -->
+<!--         </resources> -->
+<!--     </cache> -->
+<!-- </config> -->
